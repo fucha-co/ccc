@@ -1,0 +1,196 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ *
+ * In the LESS version of inuit.css, you have to import here the defaults of the core
+ * framework before your variables as there is no such thing as !default in LESS
+ */
+
+
+/**
+ * Setup
+ */
+@import "inuit.css/defaults";
+@import "vars";
+@import "inuit.css/inuit";
+
+
+
+
+
+/**
+ * She’s all yours, cap’n... Begin importing your stuff here.
+ */
+//@import "ui/example";
+
+@red : #f88529;
+.red {color: @red;} //#e74c3c
+
+// Tooltips and popovers
+// -------------------------
+//@tooltipColor:            @red; //#fff;
+//@tooltipBackground:       @white; //#000;
+//@tooltipArrowWidth:       5px;
+//@tooltipArrowColor:       @tooltipBackground;
+
+@import "bootstrap";
+
+@import "genericons";
+    .genericon {
+      width: 48px;
+      height: 48px;
+      font-size: 48px;
+      line-height: 1;
+      &.genericon-mail {font-size: 50px}
+    }
+
+.satisfy {
+  font-family: 'Satisfy', cursive;
+}
+.handlee {
+  font-family: 'Handlee', cursive;
+}
+.rancho {
+  font-family: 'Rancho', cursive;
+}
+.euphoria {
+  font-family: 'Euphoria Script', cursive;
+}
+.pathway {
+  font-family: 'Pathway Gothic One', cursive;
+}
+.marmelad {
+  font-family: 'Marmelad', cursive;
+}
+.open {
+  font-family: 'Open Sans Condensed', cursive;
+}
+.cuprum {
+  font-family: 'Cuprum', cursive;
+}
+.dancing {
+  font-family: 'Dancing Script', cursive;
+}
+
+.up {text-transform: uppercase}
+.tsb {text-shadow: 0 2px 2px rgba(0, 0, 0, .55);}
+.tsw {text-shadow: 0 1px 1px rgba(255, 255, 255, .55);}
+.bgb {background: rgba(0, 0, 0, 0.5);}
+.bgw {background: rgba(0, 0, 0, 0.2);}
+.wht {color: #ddd;}
+.blk {color: #222;}
+
+.green {color: #16a085;}
+@mba: 1em;
+.mb (@mb: @mba) {
+  margin-bottom: @mb;
+}
+@mta: 1em;
+.mt (@mt: @mta) {
+  margin-top: @mt;
+}
+
+html{
+    //padding:5%;
+    background-color:#111;
+    color:#eee;
+}
+//.demo-block{
+//    padding:0.5em;
+//    background-color:#4a8ec2;
+//    color:#fff;
+//    border-radius:4px;
+//}
+h1 {
+    margin-top: 50px;
+    .mb(.1em);
+    .tsb;
+}
+h2 {
+    .mb(2em);
+    .tsb;
+    .dancing;
+}
+h3 {
+    .mb(.3em);
+    .tsb;
+}
+h4 {
+    .mb(3em);
+    .tsb;
+}
+h5 {
+    .mb(3em);
+    .dancing;
+}
+h6 {
+    .mb(.3em);
+}
+h1, h2, h3, h4, h5, h6 {
+    .wht;
+    .bgb;
+    display: inline-block;
+    padding: 4px 10px;
+    margin-right: 4px;
+}
+span.red {padding: 0px;}
+p span {
+    .wht;
+    .bgw;
+}
+
+#weather {
+    display: inline;
+}
+
+#weather .currently {
+  margin: 0 20px;
+}
+
+
+a, a:hover {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+a {
+  text-decoration: none;
+  padding: 4px 0 4px 10px;
+}
+
+    a.twitter {
+      color: #4399ef;
+      margin-right: 100px;
+    }
+
+    a.twitter:hover {
+      .red;
+    }
+
+    a.mail {
+      color: #444;
+    }
+
+    a.mail:hover {
+      .wht;
+    }
+
+@media only screen and (min-width:~"@{lap-start}") {
+
+}
+
+@media only screen and (max-width:~"@{palm-end}px") { /* palm */
+    h1 {
+        margin-top: 20px;
+        //.mb(.7em);
+    }
+    h4 {
+      display: block;
+    }
+}
